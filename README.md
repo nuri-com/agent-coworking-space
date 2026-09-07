@@ -1,6 +1,6 @@
 # Agent Coworking Space
 
-**Free AI credits are the new free Wi-Fi.**
+**Physical coworking. With free AI credits.**
 
 A public landing-page project for a physical coworking community for tech founders, builders, researchers and PhD students.
 
@@ -47,8 +47,15 @@ Browser checks cover 4K, desktop and emulated iPhone 13/iPhone SE, booking and s
 
 Issues describe work packages; pull requests hold reviewable implementations. Production deployment is a separate approval and proof step. The existing `nuri-com/nuri-expo` application and the Nuri website article are not modified.
 
+## V2 design
+
+The hero explicitly leads with physical coworking and free AI credits. Locally hosted Manrope, lime/lilac accents, human-focused concept photography and optional CSS animation replace the original serif editorial design. The footer motion control and reduced-motion system preference both stop animation. No animation library or production dependency was added.
+
+GitHub Pages can publish the repository root directly using `.nojekyll`; all front-end asset paths are relative for a project-page URL. Publishing a design preview does not enable real booking or connect the intended domains.
+
 ## Changelog
 
 Append dated entries to this section when product scope or publication status changes.
 
+- 2026-09-07: Rebuilt the landing page around free AI credits as the coworking benefit, added accessible motion and prepared native GitHub Pages publication. (Input: Emin, AI-first visual redesign.)
 - 2026-09-07: Created the standalone public project brief and separated launch concepts from verified operations. *(Input: Emin, coworking landing-page brief.)*

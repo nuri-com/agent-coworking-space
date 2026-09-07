@@ -31,8 +31,10 @@ try {
     assert.equal(response.status(), 200);
     await page.evaluate(() => document.fonts.ready);
     assert.equal(await page.locator('h1').count(), 1);
-    assert.match((await page.locator('h1').innerText()).replace(/\s+/g, ' '), /Free AI credits.*new free Wi-Fi/i);
+    assert.match((await page.locator('h1').innerText()).replace(/\s+/g, ' '), /Coworking\. With free AI credits\./i);
+    assert.doesNotMatch(await page.locator('h1').innerText(), /wi.?fi/i);
     assert.match(await page.locator('body').innerText(), /Launch preview/i);
+    assert.equal(await page.locator('html').getAttribute('data-design'), 'ai-first-v2');
     assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), 'noindex,nofollow');
     assert.equal(await page.locator('form').evaluateAll((forms) => forms.every((f) => f.method === 'dialog')), true);
     const metrics = await page.evaluate(() => ({
@@ -93,6 +95,14 @@ try {
     assert.match(decodeURIComponent(await sponsorLink.getAttribute('href')), /does not create a sponsorship agreement/);
     await sponsor.locator('[data-close]').click();
     assert.equal(await sponsor.isVisible(), false);
+    assert.equal(await page.evaluate(() => document.getAnimations().some((a) => a.playState === 'running')), true);
+    const motion = page.locator('#motion-toggle');
+    await motion.click();
+    assert.equal(await page.locator('html').getAttribute('data-motion'), 'off');
+    assert.equal(await motion.getAttribute('aria-pressed'), 'true');
+    assert.equal(await page.evaluate(() => document.getAnimations().every((a) => a.playState !== 'running')), true);
+    await page.emulateMedia({ reducedMotion: 'reduce' });
+    assert.equal(await page.evaluate(() => document.getAnimations().filter((a) => a.playState === 'running').length), 0);
     assert.equal(await page.evaluate(() => localStorage.length + sessionStorage.length), 0);
     assert.equal((await context.cookies()).length, 0);
     assert.deepEqual(errors, []);

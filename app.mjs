@@ -83,3 +83,14 @@ function connectForm(form, type, build) {
 connectForm(bookingForm, 'booking', buildBookingEnquiry);
 connectForm(sponsorForm, 'sponsor', buildSponsorEnquiry);
 updateBooking();
+
+const motionButton = document.querySelector('#motion-toggle');
+const motionPreference = matchMedia('(prefers-reduced-motion: reduce)');
+function setMotion(paused) {
+  document.documentElement.dataset.motion = paused ? 'off' : 'on';
+  motionButton.setAttribute('aria-pressed', String(paused));
+  motionButton.textContent = paused ? 'Motion: off ▷' : 'Motion: on Ⅱ';
+}
+setMotion(motionPreference.matches);
+motionButton.addEventListener('click', () => setMotion(document.documentElement.dataset.motion !== 'off'));
+motionPreference.addEventListener('change', (event) => setMotion(event.matches));
