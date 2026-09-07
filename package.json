@@ -1,0 +1,13 @@
+{
+  "name": "agent-coworking-space",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Physical AI coworking launch preview",
+  "scripts": {
+    "start": "python3 -m http.server 18769 --bind 127.0.0.1",
+    "test": "node --test tests/booking.test.mjs",
+    "test:browser": "node scripts/browser-check.mjs"
+  },
+  "devDependencies": { "playwright": "1.59.1" }
+}

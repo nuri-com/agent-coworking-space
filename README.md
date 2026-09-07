@@ -26,6 +26,23 @@ Before real booking goes live, confirm venue operators and addresses, capacity a
 
 Static HTML, CSS and native JavaScript. No production framework or runtime dependencies. Accessible native dialogs, keyboard navigation and responsive layouts including 3840 x 2160.
 
+## Run and verify
+
+```sh
+npm ci
+npm test
+npm start
+```
+
+Open `http://127.0.0.1:18769`. In a second terminal:
+
+```sh
+npx playwright install chromium
+npm run test:browser
+```
+
+Browser checks cover 4K, desktop and emulated iPhone 13/iPhone SE, booking and sponsor enquiries, optional privacy choices, asset loading, console errors, external requests and horizontal overflow. Screenshots and JSON evidence go to the ignored `artifacts/` directory. No framework build is required.
+
 ## Coordination
 
 Issues describe work packages; pull requests hold reviewable implementations. Production deployment is a separate approval and proof step. The existing `nuri-com/nuri-expo` application and the Nuri website article are not modified.
