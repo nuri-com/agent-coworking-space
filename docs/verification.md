@@ -18,6 +18,7 @@ Public static design preview, not operational booking. No venue inventory, spons
 ## Changelog
 
 - 2026-09-08 (v3): Peanut-style brutalist skin, shorter punchier copy, per-city pass prices in city cards, unlimited-AI fun claim kept as visibly qualified proposal. Design token v3. (Input: Emin, peanut.me reference.)
+- 2026-09-08 (v7): All footnotes, captions, disclaimers, status badges and card footnotes removed; hero/photo captions, price captions, unlimited asterisk note, city status labels, ticket sub-line, dialog price caption gone. Remaining page text is 17px+; one short cities note remains. Honesty lives in the FAQ. (Input: Emin, less-is-more screenshots.)
 - 2026-09-08 (v6): Headline now WORK WITH AGENTS / FREE ~~WIFI~~ (red thick strike) AI CREDITS / & COWORKING, eyebrow COWORKING WITH FREE AI. (Input: Emin.)
 - 2026-09-08 (v5): Headline shortened to struck-through FREE WIFI / AI CREDITS / ALL DAY IN OUR SPACE, pink flows from nav through full-screen hero, hero copy trimmed, screen-reader label for the strike joke. (Input: Emin.)
 - 2026-09-08 (v4): Pink full-bleed centered hero with bubble type + sticker photo, 17px minimum font everywhere (audited), 6 cities — Berlin/Ape Unit EUR 29, Arusha/Link Space TZS 75,000, Dubai/The Block AED 105, Istanbul/Workinton TRY 1,400 (live FX 48.46), Palo Alto/Startup Embassy USD 29, Zanzibar/Fumba Town TZS 75,000 — all venues verified live, all unconfirmed. (Input: Emin.)
