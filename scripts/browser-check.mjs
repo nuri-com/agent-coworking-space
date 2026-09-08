@@ -36,8 +36,10 @@ try {
     });
     await page.waitForLoadState('networkidle');
     assert.equal(await page.locator('h1').count(), 1);
-    assert.match((await page.locator('h1').innerText()).replace(/\s+/g, ' '), /Free wifi AI credits\. All day in our space\./i);
-    assert.equal(await page.locator('h1 s.strike').evaluate((el) => getComputedStyle(el).textDecorationLine), 'line-through');
+    assert.match((await page.locator('h1').innerText()).replace(/\s+/g, ' '), /Work with agents.*wifi.*AI credits.*coworking/i);
+    const strike = await page.locator('h1 s.strike').evaluate((el) => ({ line: getComputedStyle(el).textDecorationLine, color: getComputedStyle(el).textDecorationColor }));
+    assert.equal(strike.line, 'line-through');
+    assert.equal(strike.color, 'rgb(255, 46, 77)');
     assert.match(await page.locator('body').innerText(), /Launch preview/i);
     assert.equal(await page.locator('html').getAttribute('data-design'), 'ai-first-v3');
     assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), 'noindex,nofollow');
