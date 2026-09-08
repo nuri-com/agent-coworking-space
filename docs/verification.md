@@ -18,6 +18,7 @@ Public static design preview, not operational booking. No venue inventory, spons
 ## Changelog
 
 - 2026-09-08 (v3): Peanut-style brutalist skin, shorter punchier copy, per-city pass prices in city cards, unlimited-AI fun claim kept as visibly qualified proposal. Design token v3. (Input: Emin, peanut.me reference.)
+- 2026-09-08 (v5): Headline shortened to struck-through FREE WIFI / AI CREDITS / ALL DAY IN OUR SPACE, pink flows from nav through full-screen hero, hero copy trimmed, screen-reader label for the strike joke. (Input: Emin.)
 - 2026-09-08 (v4): Pink full-bleed centered hero with bubble type + sticker photo, 17px minimum font everywhere (audited), 6 cities — Berlin/Ape Unit EUR 29, Arusha/Link Space TZS 75,000, Dubai/The Block AED 105, Istanbul/Workinton TRY 1,400 (live FX 48.46), Palo Alto/Startup Embassy USD 29, Zanzibar/Fumba Town TZS 75,000 — all venues verified live, all unconfirmed. (Input: Emin.)
 - 2026-09-08: Real collaborator photos replace AI concepts; hero underlines `free AI credits`; slogan kept as supporting tagline under the AI-first headline; EUR/AED/TZS pricing per city; Berlin=Ape Unit and Arusha=Link Space named as unconfirmed collaborators with links. (Input: Emin's photo/price/space request and executed checks.)
 - 2026-09-07: AI-first redesign, motion controls, contrast measurements, Pages publication (see git history).
