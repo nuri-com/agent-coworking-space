@@ -49,9 +49,8 @@ img { display: block; width: 100%; max-width: 100%; }
 .preview-bar a { display: inline-flex; align-items: center; min-height: 30px; gap: 1.3rem; font-weight: 700; }
 .site-header { display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; padding-block: 1.6rem; background: #e8893d; border-bottom: 3px solid var(--ink); max-width: none; width: 100%; margin-inline: 0; padding-inline: var(--gutter); }
 .site-header a, .site-header nav a { color: #181c16; }
-.brand-icon { border-color: #181c16; }
-.site-header a, .site-header nav a { color: #fff; }
-.brand-icon { border-color: #fff; }
+
+
 .brand { display: inline-flex; align-items: center; gap: .75rem; font-size: 1.5rem; line-height: 1; font-weight: 800; letter-spacing: -.065em; min-height: 44px; }
 .brand > span:last-child > span { display: block; margin-top: .28rem; font-size: 1rem; letter-spacing: -.025em; font-weight: 650; }
 .brand-icon { display: grid; place-content: center; position: relative; width: 2.6rem; height: 2.6rem; border: 2px solid var(--ink); border-radius: .65rem; font-size: 2rem; padding-bottom: .25rem; transform: rotate(-7deg); }
