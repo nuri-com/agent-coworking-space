@@ -1,8 +1,7 @@
 # Local assets
 
-- `studio.webp`: AI-generated modern coworking concept. Source: https://v3b.fal.media/files/b/0aa97cbf/ZOpyjM2u2h1w5JCUXXW-i_xFGZNTFl.png
-- `atelier.webp`: original AI-generated architectural concept. Source: https://v3b.fal.media/files/b/0aa97b16/15uC8wAu1RIW89TC-GHuV_wIHtX2jP.png
+- `space-hero.webp`, `space-clean.webp`, `space-people.webp`, `space-loft.webp`, `space-studio.webp`: real workspace photos shared with the project (source JPGs in the uploader's Downloads folder). They show the collaborator loft: white walls, wood-and-glass partitions, plants, black desks. People visible are collaborators, not staged models. Venue participation is unconfirmed; every caption says so.
+- `studio.webp`, `atelier.webp`: retired AI-generated concepts, no longer referenced by the page.
+- `manrope.ttf`: self-hosted Manrope variable font (SIL OFL 1.1, see `manrope-OFL.txt`). No remote font request.
 
-Both images are architectural concepts, not photographs of operating venues or endorsements by depicted people. Preserve the visible captions. Native source dimensions are 1024 x 576 pixels. The page layout is tested at 3840 x 2160; these are not native 4K photographs.
-
-`manrope.ttf` is the Manrope variable font, self-hosted from the Google Fonts repository. License: SIL Open Font License 1.1, included in `manrope-OFL.txt`. No remote font request is needed when viewing the page.
+All page images are local files; browser checks assert zero unexpected external requests. Source photos are up to 2048 px wide; the layout is tested at 3840 x 2160 but the photos are not native 4K.

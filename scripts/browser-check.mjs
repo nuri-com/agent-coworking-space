@@ -30,6 +30,11 @@ try {
     const response = await page.goto(base, { waitUntil: 'networkidle' });
     assert.equal(response.status(), 200);
     await page.evaluate(() => document.fonts.ready);
+    await page.evaluate(async () => {
+      for (const img of document.images) { img.scrollIntoView({ block: 'center' }); await new Promise((r) => setTimeout(r, 150)); }
+      window.scrollTo(0, 0);
+    });
+    await page.waitForLoadState('networkidle');
     assert.equal(await page.locator('h1').count(), 1);
     assert.match((await page.locator('h1').innerText()).replace(/\s+/g, ' '), /Coworking\. With free AI credits\./i);
     assert.doesNotMatch(await page.locator('h1').innerText(), /wi.?fi/i);
@@ -55,10 +60,12 @@ try {
     const dialog = page.locator('#booking-dialog');
     await dialog.waitFor({ state: 'visible' });
     assert.equal(await dialog.locator('input[type="checkbox"]:checked').count(), 0);
+    const underline = await page.locator('h1 .credit-underline').evaluate((el) => getComputedStyle(el).textDecorationLine);
+    assert.match(underline, /underline/);
     await dialog.locator('[name="city"]').selectOption('dubai');
-    assert.equal(await dialog.locator('[name="currency"]').inputValue(), 'USD');
+    assert.equal(await dialog.locator('[name="currency"]').inputValue(), 'AED');
     assert.equal(await dialog.locator('[name="date"]').getAttribute('min'), localDate('dubai'));
-    assert.equal(await page.locator('#booking-price').innerText(), '$29');
+    assert.equal(await page.locator('#booking-price').innerText(), 'AED\u00a0105');
     await dialog.locator('[name="date"]').fill(localDate('dubai'));
     await dialog.locator('[name="name"]').fill('Browser Test');
     await dialog.locator('[name="email"]').fill('browser@example.com');

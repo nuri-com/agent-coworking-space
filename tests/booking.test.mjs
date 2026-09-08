@@ -13,10 +13,16 @@ test('the three requested cities have explicit local timezones', () => {
 test('unknown and prototype-property cities are rejected', () => {
   for (const city of ['london', '__proto__', 'constructor', '']) assert.throws(() => draft({ city }), /Choose/);
 });
-test('both proposed currencies cost exactly 29', () => {
+test('proposed day-pass prices come in EUR, AED and TZS', () => {
   assert.equal(priceLabel('EUR'), '€29');
-  assert.equal(priceLabel('USD'), '$29');
-  assert.throws(() => priceLabel('AED'), /Choose/);
+  assert.equal(priceLabel('AED'), 'AED\u00a0105');
+  assert.equal(priceLabel('TZS'), 'TZS\u00a075,000');
+  assert.throws(() => priceLabel('USD'), /Choose/);
+});
+test('each city defaults to its local proposed currency', () => {
+  assert.equal(getCity('berlin').currency, 'EUR');
+  assert.equal(getCity('arusha').currency, 'TZS');
+  assert.equal(getCity('dubai').currency, 'AED');
 });
 test('dates follow the venue timezone rather than visitor or UTC date', () => {
   const boundary = new Date('2026-09-07T20:30:00Z');

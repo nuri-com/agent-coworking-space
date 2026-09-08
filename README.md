@@ -8,9 +8,9 @@ Intended domains: `agentcoworkingspace.com` and `aicoworkingspace.com`. Domain r
 
 ## Product brief
 
-- Proposed day pass: EUR 29 or USD 29, with workspace, coffee, Wi-Fi and on-site AI API access.
+- Proposed day pass by city: EUR 29 (Berlin), AED 105 (Dubai), TZS 75,000 (Arusha), with workspace, coffee, Wi-Fi and on-site AI API access.
 - Proposed hours: 10:00-20:00 in each location's local timezone. Website booking and walk-ins subject to actual capacity.
-- Cities in the launch brief: Berlin, Arusha (Tanzania) and Dubai. Ape Unit is the named prospective Berlin collaborator; its venue and participation need explicit publication approval.
+- Cities in the launch brief: Berlin (named space: Ape Unit, https://apeunit.com/), Arusha, Tanzania (named space: Link Space, https://mylinkspacetz.com/) and Dubai. Both named collaborators are unconfirmed; venue and participation need explicit publication approval.
 - An initiative by Nuri. Prem.ai is a partner placeholder; Ark Labs is a proposed sponsor pending confirmation. These names must not appear as confirmed endorsements.
 - Sponsorship can include events, consensual introductions, recruiting, accelerator/VC connections and separately consented research contributions. No automatic contact exports or blanket training rights.
 
@@ -24,7 +24,7 @@ Before real booking goes live, confirm venue operators and addresses, capacity a
 
 ## Architecture
 
-Static HTML, CSS and native JavaScript. No production framework or runtime dependencies. Accessible native dialogs, keyboard navigation and responsive layouts including 3840 x 2160.
+Static HTML, CSS and native JavaScript. No production framework or runtime dependencies. Accessible native dialogs, keyboard navigation and responsive layouts including 3840 x 2160. Hero and space photos are real collaborator-space photos stored locally in `assets/space-*.webp`.
 
 ## Run and verify
 

@@ -1,8 +1,9 @@
 export const CITIES = Object.freeze({
-  berlin: Object.freeze({ name: 'Berlin', country: 'Germany', timeZone: 'Europe/Berlin', currency: 'EUR' }),
-  arusha: Object.freeze({ name: 'Arusha', country: 'Tanzania', timeZone: 'Africa/Dar_es_Salaam', currency: 'USD' }),
-  dubai: Object.freeze({ name: 'Dubai', country: 'United Arab Emirates', timeZone: 'Asia/Dubai', currency: 'USD' }),
+  berlin: Object.freeze({ name: 'Berlin', country: 'Germany', timeZone: 'Europe/Berlin', currency: 'EUR', venue: 'Ape Unit', venueUrl: 'https://apeunit.com/' }),
+  arusha: Object.freeze({ name: 'Arusha', country: 'Tanzania', timeZone: 'Africa/Dar_es_Salaam', currency: 'TZS', venue: 'Link Space', venueUrl: 'https://mylinkspacetz.com/' }),
+  dubai: Object.freeze({ name: 'Dubai', country: 'United Arab Emirates', timeZone: 'Asia/Dubai', currency: 'AED' }),
 });
+export const PRICES = Object.freeze({ EUR: 29, AED: 105, TZS: 75000 });
 export const CONTACT = 'emin@nuri.com';
 
 export function getCity(id) {
@@ -20,8 +21,8 @@ export function localDate(cityId, now = new Date()) {
 }
 
 export function priceLabel(currency) {
-  if (!['EUR', 'USD'].includes(currency)) throw new Error('Choose EUR or USD.');
-  return new Intl.NumberFormat('en', { style: 'currency', currency, maximumFractionDigits: 0 }).format(29);
+  if (!Object.hasOwn(PRICES, currency)) throw new Error('Choose EUR, AED or TZS.');
+  return new Intl.NumberFormat('en', { style: 'currency', currency, maximumFractionDigits: 0 }).format(PRICES[currency]);
 }
 
 function text(value, label, limit, multiline = false) {
@@ -58,7 +59,7 @@ export function buildBookingEnquiry(input, now = new Date()) {
   const message = input.message?.trim() ? text(input.message, 'your message', 1500, true) : '(none)';
   return emailDraft(`Coworking enquiry: ${city.name} / ${date}`, [
     'LAUNCH PREVIEW ENQUIRY. This is not a confirmed booking or a request to charge payment.',
-    '', `Name: ${name}`, `Email: ${address}`, `City: ${city.name}, ${city.country}`,
+    '', `Name: ${name}`, `Email: ${address}`, `City: ${city.name}, ${city.country}${city.venue ? ` (${city.venue})` : ''}`,
     `Requested date: ${date}`, `Proposed hours: 10:00-20:00 (${city.timeZone})`,
     `Proposed day-pass price: ${price} (${input.currency}). Final terms and availability require confirmation.`,
     '', 'Please confirm whether this venue, date and offer will be available.',
