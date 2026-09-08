@@ -36,7 +36,7 @@ try {
     });
     await page.waitForLoadState('networkidle');
     assert.equal(await page.locator('h1').count(), 1);
-    assert.match((await page.locator('h1').innerText()).replace(/\s+/g, ' '), /AI\. WIFI\. COFFEE\. All free\. All day\./i);
+    assert.match((await page.locator('h1').innerText()).replace(/\s+/g, ' '), /Cowork with agents/i);
     const strike = await page.locator('.eyebrow s.strike').evaluate((el) => ({ line: getComputedStyle(el).textDecorationLine, color: getComputedStyle(el).textDecorationColor }));
     assert.equal(strike.line, 'line-through');
     assert.equal(strike.color, 'rgb(255, 46, 77)');
