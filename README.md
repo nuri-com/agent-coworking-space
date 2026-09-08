@@ -24,7 +24,7 @@ Before real booking goes live, confirm venue operators and addresses, capacity a
 
 ## Architecture
 
-Static HTML, CSS and native JavaScript. No production framework or runtime dependencies. Accessible native dialogs, keyboard navigation and responsive layouts including 3840 x 2160. Hero and space photos are real collaborator-space photos stored locally in `assets/space-*.webp`.
+Static HTML, CSS and native JavaScript. No production framework or runtime dependencies. Accessible native dialogs, keyboard navigation and responsive layouts including 3840 x 2160. Hero and space photos are real collaborator-space photos stored locally in `assets/space-*.webp`. Skin v3 (`data-design="ai-first-v3"`) is a playful brutalist look: sticker badges, hard shadows, short copy.
 
 ## Run and verify
 

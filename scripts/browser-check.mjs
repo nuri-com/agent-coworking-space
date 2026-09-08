@@ -39,7 +39,7 @@ try {
     assert.match((await page.locator('h1').innerText()).replace(/\s+/g, ' '), /Coworking\. With free AI credits\./i);
     assert.doesNotMatch(await page.locator('h1').innerText(), /wi.?fi/i);
     assert.match(await page.locator('body').innerText(), /Launch preview/i);
-    assert.equal(await page.locator('html').getAttribute('data-design'), 'ai-first-v2');
+    assert.equal(await page.locator('html').getAttribute('data-design'), 'ai-first-v3');
     assert.equal(await page.locator('meta[name="robots"]').getAttribute('content'), 'noindex,nofollow');
     assert.equal(await page.locator('form').evaluateAll((forms) => forms.every((f) => f.method === 'dialog')), true);
     const metrics = await page.evaluate(() => ({
