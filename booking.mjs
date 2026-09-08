@@ -1,13 +1,16 @@
 export const CITIES = Object.freeze({
   berlin: Object.freeze({ name: 'Berlin', country: 'Germany', timeZone: 'Europe/Berlin', currency: 'EUR', venue: 'Ape Unit', venueUrl: 'https://apeunit.com/' }),
   arusha: Object.freeze({ name: 'Arusha', country: 'Tanzania', timeZone: 'Africa/Dar_es_Salaam', currency: 'TZS', venue: 'Link Space', venueUrl: 'https://mylinkspacetz.com/' }),
-  dubai: Object.freeze({ name: 'Dubai', country: 'United Arab Emirates', timeZone: 'Asia/Dubai', currency: 'AED' }),
+  dubai: Object.freeze({ name: 'Dubai', country: 'United Arab Emirates', timeZone: 'Asia/Dubai', currency: 'AED', venue: 'The Block', venueUrl: 'https://the-block.com/' }),
+  istanbul: Object.freeze({ name: 'Istanbul', country: 'Türkiye', timeZone: 'Europe/Istanbul', currency: 'TRY', venue: 'Workinton', venueUrl: 'https://workinton.com/en/' }),
+  paloalto: Object.freeze({ name: 'Palo Alto', country: 'United States', timeZone: 'America/Los_Angeles', currency: 'USD', venue: 'Startup Embassy', venueUrl: 'https://startupembassy.com/' }),
+  zanzibar: Object.freeze({ name: 'Zanzibar', country: 'Tanzania', timeZone: 'Africa/Dar_es_Salaam', currency: 'TZS', venue: 'Fumba Town', venueUrl: 'https://fumba.town/' }),
 });
-export const PRICES = Object.freeze({ EUR: 29, AED: 105, TZS: 75000 });
+export const PRICES = Object.freeze({ EUR: 29, AED: 105, TZS: 75000, TRY: 1400, USD: 29 });
 export const CONTACT = 'emin@nuri.com';
 
 export function getCity(id) {
-  if (!Object.hasOwn(CITIES, id)) throw new Error('Choose Berlin, Arusha or Dubai.');
+  if (!Object.hasOwn(CITIES, id)) throw new Error('Choose Berlin, Arusha, Dubai, Istanbul, Palo Alto or Zanzibar.');
   return CITIES[id];
 }
 
@@ -21,7 +24,7 @@ export function localDate(cityId, now = new Date()) {
 }
 
 export function priceLabel(currency) {
-  if (!Object.hasOwn(PRICES, currency)) throw new Error('Choose EUR, AED or TZS.');
+  if (!Object.hasOwn(PRICES, currency)) throw new Error('Choose EUR, AED, TZS, TRY or USD.');
   return new Intl.NumberFormat('en', { style: 'currency', currency, maximumFractionDigits: 0 }).format(PRICES[currency]);
 }
 

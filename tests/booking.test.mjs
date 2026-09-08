@@ -7,7 +7,7 @@ const valid = { city: 'berlin', date: '2026-09-08', currency: 'EUR', name: 'Test
 const draft = (changes = {}) => buildBookingEnquiry({ ...valid, ...changes }, now);
 
 test('the three requested cities have explicit local timezones', () => {
-  assert.deepEqual(Object.keys(CITIES), ['berlin', 'arusha', 'dubai']);
+  assert.deepEqual(Object.keys(CITIES), ['berlin', 'arusha', 'dubai', 'istanbul', 'paloalto', 'zanzibar']);
   assert.equal(getCity('arusha').timeZone, 'Africa/Dar_es_Salaam');
 });
 test('unknown and prototype-property cities are rejected', () => {
@@ -17,12 +17,17 @@ test('proposed day-pass prices come in EUR, AED and TZS', () => {
   assert.equal(priceLabel('EUR'), '€29');
   assert.equal(priceLabel('AED'), 'AED\u00a0105');
   assert.equal(priceLabel('TZS'), 'TZS\u00a075,000');
-  assert.throws(() => priceLabel('USD'), /Choose/);
+  assert.equal(priceLabel('TRY'), 'TRY\u00a01,400');
+  assert.equal(priceLabel('USD'), '$29');
+  assert.throws(() => priceLabel('GBP'), /Choose/);
 });
 test('each city defaults to its local proposed currency', () => {
   assert.equal(getCity('berlin').currency, 'EUR');
   assert.equal(getCity('arusha').currency, 'TZS');
   assert.equal(getCity('dubai').currency, 'AED');
+  assert.equal(getCity('istanbul').currency, 'TRY');
+  assert.equal(getCity('paloalto').currency, 'USD');
+  assert.equal(getCity('zanzibar').currency, 'TZS');
 });
 test('dates follow the venue timezone rather than visitor or UTC date', () => {
   const boundary = new Date('2026-09-07T20:30:00Z');

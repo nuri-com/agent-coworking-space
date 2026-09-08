@@ -8,9 +8,9 @@ Intended domains: `agentcoworkingspace.com` and `aicoworkingspace.com`. Domain r
 
 ## Product brief
 
-- Proposed day pass by city: EUR 29 (Berlin), AED 105 (Dubai), TZS 75,000 (Arusha), with workspace, coffee, Wi-Fi and on-site AI API access.
+- Proposed day pass by city: EUR 29 (Berlin), TZS 75,000 (Arusha, Zanzibar), AED 105 (Dubai), TRY 1,400 (Istanbul), USD 29 (Palo Alto), with workspace, coffee, Wi-Fi and on-site AI API access.
 - Proposed hours: 10:00-20:00 in each location's local timezone. Website booking and walk-ins subject to actual capacity.
-- Cities in the launch brief: Berlin (named space: Ape Unit, https://apeunit.com/), Arusha, Tanzania (named space: Link Space, https://mylinkspacetz.com/) and Dubai. Both named collaborators are unconfirmed; venue and participation need explicit publication approval.
+- Cities in the launch brief: Berlin (Ape Unit), Arusha (Link Space), Dubai (The Block), Istanbul (Workinton), Palo Alto (Startup Embassy), Zanzibar (Fumba Town). All named collaborators are unconfirmed; venue and participation need explicit publication approval.
 - An initiative by Nuri. Prem.ai is a partner placeholder; Ark Labs is a proposed sponsor pending confirmation. These names must not appear as confirmed endorsements.
 - Sponsorship can include events, consensual introductions, recruiting, accelerator/VC connections and separately consented research contributions. No automatic contact exports or blanket training rights.
 
