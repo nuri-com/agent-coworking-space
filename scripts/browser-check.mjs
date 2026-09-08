@@ -38,7 +38,7 @@ try {
     assert.equal(await page.locator('h1').count(), 1);
     assert.match((await page.locator('h1').innerText()).replace(/\s+/g, ' '), /Cowork & free AI credits/i);
     assert.match(await page.locator('meta[name="theme-color"]').getAttribute('content'), /^#[0-9a-f]{6}$/i);
-    assert.equal(await page.locator('.hero').evaluate((el) => getComputedStyle(el).backgroundColor), 'rgb(26, 53, 232)');
+    assert.equal(await page.locator('.hero').evaluate((el) => getComputedStyle(el).backgroundColor), 'rgb(232, 137, 61)');
     assert.match((await page.locator('.hero .eyebrow').innerText()).replace(/\s+/g, ' '), /FREE AI \+ WIFI \+ COFFEE/i);
     assert.equal(await page.locator('.hero .eyebrow s').count(), 0);
     assert.match(await page.locator('body').innerText(), /Launch preview/i);
