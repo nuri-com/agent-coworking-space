@@ -69,6 +69,7 @@ test('research interest does not confer training rights', () => {
   assert.match(result.body, /send information only/);
   assert.match(result.body, /Neither preference authorizes training/);
   assert.match(result.body, /separate informed agreement/);
+  assert.match(result.body, /Sharing my contact details with sponsors requires my separate approval/);
 });
 test('mailto recipient is fixed and special characters stay in the body', () => {
   const result = draft({ message: 'Hello &bcc=attacker@example.com # ? <script>not executed</script>' });

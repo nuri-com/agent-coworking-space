@@ -1,9 +1,11 @@
-import { CITIES, getCity, localDate, priceLabel, buildBookingEnquiry, buildSponsorEnquiry } from './booking.mjs';
+import { CITIES, getCity, localDate, priceLabel, buildBookingEnquiry, buildSponsorEnquiry, buildAcceleratorEnquiry } from './booking.mjs';
 
 const bookingDialog = document.querySelector('#booking-dialog');
 const bookingForm = document.querySelector('#booking-form');
 const sponsorDialog = document.querySelector('#sponsor-dialog');
 const sponsorForm = document.querySelector('#sponsor-form');
+const acceleratorDialog = document.querySelector('#accelerator-dialog');
+const acceleratorForm = document.querySelector('#accelerator-form');
 
 function clearResult(type) {
   document.querySelector(`#${type}-result`).hidden = true;
@@ -39,12 +41,22 @@ for (const button of document.querySelectorAll('[data-book]')) {
 for (const button of document.querySelectorAll('[data-sponsor]')) {
   button.addEventListener('click', () => {
     sponsorForm.reset();
+    sponsorForm.elements.role.value = button.dataset.partnerKind === 'sponsor' ? 'sponsor' : 'capital';
     clearResult('sponsor');
     sponsorDialog.showModal();
   });
 }
 
-for (const dialog of [bookingDialog, sponsorDialog]) {
+for (const button of document.querySelectorAll('[data-accelerator]')) {
+  button.addEventListener('click', () => {
+    acceleratorForm.reset();
+    acceleratorForm.elements.teamType.value = button.dataset.accelerator === 'studio' ? 'studio' : 'startup';
+    clearResult('accelerator');
+    acceleratorDialog.showModal();
+  });
+}
+
+for (const dialog of [bookingDialog, sponsorDialog, acceleratorDialog]) {
   for (const button of dialog.querySelectorAll('[data-close]')) button.addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', (event) => {
     if (event.target !== dialog) return;
@@ -82,6 +94,7 @@ function connectForm(form, type, build) {
 }
 connectForm(bookingForm, 'booking', buildBookingEnquiry);
 connectForm(sponsorForm, 'sponsor', buildSponsorEnquiry);
+connectForm(acceleratorForm, 'accelerator', buildAcceleratorEnquiry);
 updateBooking();
 
 const motionButton = document.querySelector('#motion-toggle');
