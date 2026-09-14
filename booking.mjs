@@ -71,19 +71,41 @@ export function buildBookingEnquiry(input, now = new Date()) {
     `Optional research programme information requested: ${input.researchInterest === true ? 'Yes, send information only.' : 'No.'}`,
     'Neither preference authorizes training on, collection of, or sharing of my prompts, code or API sessions.',
     'Any research contribution needs a separate informed agreement.',
+    'Sharing my contact details with sponsors requires my separate approval.',
     '', `Message: ${message}`,
   ]);
 }
 
 export function buildSponsorEnquiry(input) {
+  const role = input.role ?? 'sponsor';
+  if (!['sponsor', 'capital'].includes(role)) throw new Error('Choose capital partner or sponsor.');
   const name = text(input.name, 'your name', 120);
   const company = text(input.company, 'your company', 160);
   const address = email(input.email);
   const message = text(input.message, 'your message', 1500, true);
-  return emailDraft(`Coworking sponsorship enquiry: ${company}`, [
-    'I would like to discuss the Agent Coworking Space launch concept.',
+  return emailDraft(`${role === 'capital' ? 'Capital partner' : 'Coworking sponsorship'} enquiry: ${company}`, [
+    role === 'capital' ? 'I would like to discuss funding the Agent Coworking Space AI-credit program.' : 'I would like to discuss sponsoring the Agent Coworking Space program.',
+    `Interest: ${role === 'capital' ? 'Capital partner / LP' : 'Credits or space sponsorship'}`,
     '', `Name: ${name}`, `Company: ${company}`, `Email: ${address}`, '', message,
-    '', 'This enquiry does not create a sponsorship agreement or any rights to visitor data.',
+    '', 'This enquiry does not create a sponsorship agreement, an investment commitment or any rights to visitor data.',
     'Introductions require visitor opt-in. Research/training participation requires a separate informed agreement.',
+  ]);
+}
+
+export function buildAcceleratorEnquiry(input) {
+  if (!['startup', 'studio'].includes(input.teamType)) throw new Error('Choose startup or studio.');
+  const name = text(input.name, 'your name', 120);
+  const company = text(input.company, 'your company or studio', 160);
+  const address = email(input.email);
+  const message = text(input.message, 'your project and traction', 1500, true);
+  return emailDraft(`AI accelerator ${input.teamType} enquiry: ${company}`, [
+    'I would like to discuss joining the Agent Coworking Space AI accelerator.',
+    '', `Team type: ${input.teamType}`, `Company or studio: ${company}`, `Name: ${name}`, `Email: ${address}`,
+    '', 'Project and traction:', message,
+    '', 'Please share the program eligibility, available models, credit valuation and proposed uncapped SAFE terms.',
+    'I understand the proposed program lasts 12–24 weeks and exchanges credits actually consumed for an uncapped SAFE.',
+    'This is an application enquiry, not acceptance of a SAFE, an investment or a commitment to spend.',
+    'No credits or place in the program are granted by this form. Allocation and terms require a separate agreement.',
+    'This enquiry is for application review and grants no training rights or permission to share our submitted material, prompts, code or API sessions.',
   ]);
 }
