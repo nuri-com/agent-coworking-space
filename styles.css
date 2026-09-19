@@ -400,6 +400,8 @@ html[data-motion='off'] *, html[data-motion='off'] *::before, html[data-motion='
 .text-link { display: inline-flex; align-items: center; gap: .7rem; min-height: 44px; font-size: 1rem; font-weight: 700; text-decoration: underline; text-underline-offset: .25em; }
 .hero-funding { font-size: 1rem; color: #3a2a18; }
 .accelerator-section { background: var(--lilac); color: var(--ink); padding-block: clamp(4rem, 7vw, 12rem); border-block: 3px solid var(--ink); }
+.accelerator-section + .accelerator-section { background: #ffe7aa; }
+#ai-hour h2 > span { color: #7a3fa8; }
 .accelerator-section h2 { font-size: clamp(3.2rem, 7vw, 15rem); margin-top: 2rem; }
 .accelerator-section h2 > span { color: #5b3fae; }
 .program-facts { margin-top: 3rem; font-size: clamp(20px, 2vw, 56px); line-height: 1.5; }

@@ -1,0 +1,41 @@
+Company,FirstName,LastName,Role,Domain,Email
+Stripe,Patrick,Collison,Cofounder,stripe.com,pcollison@stripe.com
+xAI,Elon,Musk,CEO,x.ai,elon@x.ai
+Nous Research,Ekin,Karahan,Cofounder,nousresearch.com,
+Groq,Jonathan,Ross,CEO,groq.com,
+Modal,Erik,Bernhardsson,CEO,modal.com,erik@modal.com
+Fireworks AI,Lin,Qiao,CEO,fireworks.ai,lqiao@fireworks.ai
+Baseten,Tuhin,Srivastava,CEO,baseten.co,tuhin@baseten.co
+OctoAI,Luis,Ceze,CEO,octo.ai,lceze@octo.ai
+NVIDIA,Jensen,Huang,CEO,nvidia.com,jensen.huang@nvidia.com
+Slack,Denise,Dresser,CEO,slack.com,
+Project A,Thies,Linde,Managing Partner,project-a.com,
+Point Nine,Christoph,Janz,Founding Partner,pointnine.com,christoph@pointnine.com
+Cherry Ventures,Christian,Meermann,Founding Partner,cherry.vc,christian@cherry.vc
+Sahara Ventures,Jumanne,Mtambalike,Founder,saharaventures.com,jumanne@saharaventures.com
+Sahara Ventures,Silas,Adamu,Co-founder,saharaventures.com,
+Circle,Jeremy,Allaire,CEO,circle.com,jallaire@circle.com
+Coinbase,Brian,Armstrong,CEO,coinbase.com,brian@coinbase.com
+Ollama,Jeffrey,Johnson,Cofounder,ollama.com,jeff@ollama.com
+OpenAI,Sam,Altman,CEO,openai.com,sam.a@openai.com
+Anthropic,Dario,Amodei,CEO,anthropic.com,dario@anthropic.com
+Mistral AI,Arthur,Mensch,CEO,mistral.ai,arthur.mensch@mistral.ai
+Hugging Face,Clem,Delangue,CEO,huggingface.co,clem@huggingface.co
+Together AI,Vipul,Ved Prakash,CEO,together.ai,
+Cerebras,Andrew,Feldman,CEO,cerebras.ai,andrew@cerebras.ai
+Perplexity,Aravind,Srinivas,CEO,perplexity.ai,aravind@perplexity.ai
+Replicate,Ben,Firshman,Cofounder,replicate.com,
+Vercel,Guillermo,Rauch,CEO,vercel.com,guillermo.rauch@vercel.com
+GitHub,Thomas,Dohmke,CEO,github.com,thomasdohmke@github.com
+Cursor,Aman,Sanger,CEO,cursor.com,aman@cursor.com
+Linear,Karri,Saarinen,CEO,linear.app,ks@linear.app
+Replit,Amjad,Masad,CEO,replit.com,amjad@replit.com
+Figma,Dylan,Field,CEO,figma.com,dylan@figma.com
+Databricks,Ali,Ghodsi,CEO,databricks.com,ali@databricks.com
+Ethereum Foundation,Aya,Miyaguchi,Executive Director,ethereum.org,aya@ethereum.org
+Solana Foundation,Anatoly,Yakovenko,Cofounder,solana.com,
+Arbitrum Foundation,Steven,Goldfeder,CEO,arbitrum.foundation,
+Kraken,Dave,Ripley,CEO,kraken.com,
+Microsoft Startups,Microsoft,Startups,Team,microsoft.com,
+AWS Startups,AWS,Startups,Team,amazon.com,
+Google Startups,Google,Startups,Team,google.com,

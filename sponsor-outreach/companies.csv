@@ -1,0 +1,67 @@
+Category,Company,Domain,Email,Source/Notes
+ai,OpenAI,openai.com,press@openai.com,public press contact
+ai,Anthropic,anthropic.com,press@anthropic.com,public press contact
+ai,Mistral AI,mistral.ai,contact@mistral.ai,public contact
+ai,Ollama,ollama.com,support@ollama.com,verified
+ai,xAI,x.ai,press@x.ai,public press
+ai,Cohere,cohere.com,press@cohere.com,public press
+ai,Aleph Alpha,aleph-alpha.com,info@aleph-alpha.com,public contact
+ai,Stability AI,stability.ai,press@stability.ai,public press
+ai,Nous Research,nousresearch.com,contact@nousresearch.com,public contact
+ai,Hugging Face,huggingface.co,press@huggingface.co,public press
+ai,Together AI,together.ai,hello@together.ai,public contact
+ai,Fireworks AI,fireworks.ai,contact@fireworks.ai,public contact
+ai,Groq,groq.com,press@groq.com,public press
+ai,Cerebras,cerebras.ai,info@cerebras.ai,public contact
+ai,Perplexity,perplexity.ai,press@perplexity.ai,public press
+ai,Scale AI,scale.ai,press@scale.ai,public press
+ai,Replicate,replicate.com,support@replicate.com,public contact
+ai,Modal,modal.com,founders@modal.com,public founders contact
+ai,Baseten,baseten.co,hello@baseten.co,public contact
+ai,OctoAI,octo.ai,hello@octo.ai,public contact
+devtools,Vercel,vercel.com,hi@vercel.com,public contact
+devtools,GitHub,github.com,press@github.com,public press
+devtools,GitLab,gitlab.com,press@gitlab.com,public press
+devtools,Cursor,cursor.com,press@cursor.com,verified
+devtools,Replit,replit.com,contact@replit.com,public contact
+devtools,Linear,linear.app,hello@linear.app,public contact
+devtools,Notion,makenotion.com,press@makenotion.com,public press
+devtools,Slack,slack.com,press@slack.com,public press
+devtools,Figma,figma.com,press@figma.com,public press
+devtools,JetBrains,jetbrains.com,press@jetbrains.com,public press
+cloud,Google Cloud,google.com,startups@google.com,verify
+cloud,Microsoft,microsoft.com,startups@microsoft.com,public founders hub
+cloud,AWS,amazon.com,aws-startups@amazon.com,public activate contact
+cloud,NVIDIA,nvidia.com,inception@nvidia.com,public inception program
+cloud,Databricks,databricks.com,press@databricks.com,verified
+crypto,Circle,circle.com,press@circle.com,public press
+crypto,Coinbase,coinbase.com,press@coinbase.com,public press
+crypto,Stripe,stripe.com,press@stripe.com,public press
+crypto,Solana Foundation,solana.com,press@solana.com,public press
+crypto,Ethereum Foundation,ethereum.org,press@ethereum.org,public press
+crypto,Arbitrum Foundation,arbitrum.foundation,press@arbitrum.foundation,verify
+crypto,Optimism,optimism.io,partnerships@optimism.io,verified
+crypto,Kraken,kraken.com,press@kraken.com,public press
+crypto,Ledger,ledger.com,press@ledger.com,public press
+vc,Y Combinator,ycombinator.com,info@ycombinator.com,public contact
+vc,a16z,a16z.com,press@a16z.com,public press
+vc,Sequoia,sequoiacap.com,press@sequoiacap.com,public press
+vc,Founders Fund,foundersfund.com,press@foundersfund.com,public press
+vc,Point Nine,pointnine.com,berlin@pointnine.com,public Berlin office
+vc,Project A,project-a.com,hello@project-a.com,public contact
+vc,HV Capital,hvcapital.com,berlin@hvcapital.com,public Berlin office
+vc,Cherry Ventures,cherry.vc,berlin@cherry.vc,public Berlin office
+vc,Antler,antler.co,hello@antler.co,public contact
+vc,Techstars,techstars.com,info@techstars.com,public contact
+vc,500 Global,500.co,info@500.co,public contact
+vc,Sahara Ventures,saharaventures.com,info@saharaventures.com,public contact
+coffee,Lavazza,lavazza.com,press@lavazza.com,public press
+coffee,Nespresso,nestle.com,press@nestle.com,public press
+coffee,Blue Bottle,bluebottlecoffee.com,press@bluebottlecoffee.com,public press
+coffee,IKEA,ikea.com,press@ikea.com,public press
+office,Steelcase,steelcase.com,press@steelcase.com,public press
+hr,LinkedIn,linkedin.com,press@linkedin.com,public press
+hr,Indeed,indeed.com,press@indeed.com,public press
+hr,Personio,personio.com,press@personio.com,public press
+hr,Remote,remote.com,press@remote.com,public press
+hr,Deel,deel.com,press@deel.com,public press
